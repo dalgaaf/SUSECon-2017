@@ -1,0 +1,93 @@
+<!-- .slide: data-state="section-break" id="section-break-1" data-timing="10s" -->
+# TelekomMail platform
+
+
+<!-- .slide: data-state="normal" id="mailplatform-overview" data-timing="20s" data-menu-title="Overview" -->
+## TelekomMail
+
+* DT's mail platform for customers
+
+* dovecot
+
+* Network-Attached Storage (NAS)
+
+* NFS (sharded)
+
+* ~1.3 petabyte net storage
+
+* ~39 million accounts
+
+
+<!-- .slide: data-state="normal" id="mailplatform-nfs" data-timing="20s" data-menu-title="NFS" -->
+## NFS Operations
+
+<center><img src="images/nfs-ops_libreoffice.png" style="width:100%"></center>
+
+
+<!-- .slide: data-state="normal" id="mailplatform-nfs" data-timing="20s" data-menu-title="NFS" -->
+## NFS Traffic
+
+<center><img data-src="images/nfs-traffic_libreoffice.png" style="width:100%"></center>
+
+
+<!-- .slide: data-state="normal" id="mailplatform-nfs-stats" data-timing="20s" data-menu-title="NFS-stats" -->
+## NFS Statistics
+
+### ~42% usable raw space
+
+### NFS IOPS
+  * max: ~835,000
+  * avg: ~390,000
+
+### relevant IO:
+  * WRITE: 107,700 / 50,000
+  * READ:  65,700 / 30,900
+
+
+<!-- .slide: data-state="normal" id="mailplatform-mails-nums" data-timing="20s" data-menu-title="email statistics" -->
+## Email Statistics
+
+### 6.7 billion emails
+  * 1.2 petabyte net
+  * compression
+
+### 1.2 billion index/cache/metadata files
+  * avg: 24 kiB
+  * max: ~600 MiB
+
+
+<!-- .slide: data-state="normal" id="mailplatform-mails-dist" data-timing="20s" data-menu-title="email distribution" -->
+## Email Distribution
+
+<center><img src="images/email-size-distribution_libreoffice.png" style="width:85%"></center>
+
+
+<!-- .slide: data-state="normal" id="store-emails" data-timing="20s" data-menu-title="How stored?" -->
+## How are emails stored?
+
+* Emails are written once, read many (WORM)
+
+* Usage depends on:
+  * protocol (IMAP vs POP3)
+  * user frontend (mailer vs webmailer)
+
+* usually separated metadata, caches and indexes
+  * lost of metadata/indexes is critical
+
+* without attachments easy to compress
+
+
+<!-- .slide: data-state="normal" id="store-emails-1" data-timing="20s" data-menu-title="Where to store emails?" -->
+## Where to store emails?
+
+### Filesystem
+  * maildir
+  * mailbox
+
+### Database
+  * SQL
+
+### Objectstore
+  * S3
+  * Swift
+
