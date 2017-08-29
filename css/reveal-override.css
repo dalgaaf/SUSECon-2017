@@ -333,11 +333,13 @@
         color: white !important; }
     .cover .reveal .slides .presenters h3 {
       font-size: 2rem; }
+    .cover .reveal .slides .presenters h4 {
+      font-size: 1.5rem; }
     .cover .reveal .slides .presenters .name {
       font-weight: bold; }
   .cover .reveal .slides h2, .cover .reveal .slides h3, .cover .reveal .slides h4, .cover .reveal .slides h5, .cover .reveal .slides h6 {
     font-weight: normal; }
-.cover .reveal h1, .cover .reveal h2, .cover .reveal h3 {
+.cover .reveal h1, .cover .reveal h2, .cover .reveal h3, .cover .reveal h4 {
   margin-bottom: 0em; }
 .cover .reveal .slide-number {
   display: none !important; }
