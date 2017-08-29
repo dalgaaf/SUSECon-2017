@@ -227,7 +227,8 @@
       font-family: "Source Code Pro", monospace !important;
       font-weight: normal;
       text-shadow: none;
-      text-transform: none; }
+      text-transform: none;
+      max-height: 100%; }
     .reveal .slides section ul {
       margin-left: 20px;
       margin-top: 0.6em;
