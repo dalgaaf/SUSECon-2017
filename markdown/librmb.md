@@ -105,7 +105,30 @@
 ### writable attributes are stored in Dovecot index files
 
 
-<!-- .slide: data-state="normal" id="librmb-DT-2.3" data-timing="20s" data-menu-title="rados-dict" -->
+<!-- .slide: data-state="normal" id="librmb-DT-2.3" data-timing="20s" data-menu-title="rmb tool" -->
+## Dump email details from RADOS
+
+<pre><code class="none">$> rmb -p mail_storage -N t1 ls M=ad54230e65b49a59381100009c60b9f7
+
+mailbox_count: 1
+
+MAILBOX: M(mailbox_guid)=ad54230e65b49a59381100009c60b9f7
+         mail_total=2, mails_displayed=2
+         mailbox_size=5539 bytes
+
+         MAIL:   U(uid)=4
+                 oid = a2d69f2868b49a596a1d00009c60b9f7
+                 R(receive_time)=Tue Jan 14 00:18:11 2003
+                 S(save_time)=Mon Aug 21 12:22:32 2017
+                 Z(phy_size)=2919 V(v_size) = 2919 stat_size=2919
+                 M(mailbox_guid)=ad54230e65b49a59381100009c60b9f7
+                 G(mail_guid)=a3d69f2868b49a596a1d00009c60b9f7
+                 I(rbox_version): 0.1
+[..]
+</code></pre>
+
+
+<!-- .slide: data-state="normal" id="librmb-DT-2.4" data-timing="20s" data-menu-title="rados-dict" -->
 ## RADOS Dictionary Plugin
 
 ### make use of Ceph omap key/value store
