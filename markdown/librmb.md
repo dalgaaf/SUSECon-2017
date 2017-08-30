@@ -142,14 +142,15 @@ MAILBOX: M(mailbox_guid)=ad54230e65b49a59381100009c60b9f7
 <!-- .slide: data-state="normal" id="librmb-DT-3" data-timing="20s" data-menu-title="librmb" -->
 ## It's open source!
 
-### License:
-* ### `LGPLv2.1`
+### License: `LGPLv2.1`
 
-### Language:
-* ### `C++`
+### Language: `C++`
 
-### Location: 
-* ### <a href="https://github.com/ceph-dovecot/">github.com/ceph-dovecot/</a>
+### Location: <a href="https://github.com/ceph-dovecot/">github.com/ceph-dovecot/</a>
+
+### Supported Dovecot versions:
+* 2.2 >= 2.2.21
+* 2.3
 
 
 <!-- .slide: data-state="normal" id="ceph-requirements" data-timing="20s" data-menu-title="Ceph requirements" -->
