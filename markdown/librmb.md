@@ -33,7 +33,7 @@
 <!-- .slide: data-state="normal" id="librmb-DT" data-timing="20s" data-menu-title="DT's approach" -->
 ## DT's approach
 <div>
-     <img style="height: 60%; left: 60%; position: absolute" alt="Partner"
+     <img style="height: 65%; left: 65%; position: absolute" alt="Partner"
           data-src="images/partner.png" />
 </div>
 
@@ -41,8 +41,10 @@
 * closed source is no option
 * develop / sponsor a solution
 * open source it
-* partner with `Tallence AG` for development
-* partner with `SUSE` for Ceph
+* partner with:
+  * `Wido den Hollander (42on.com)` for consulting
+  * `Tallence AG` for development
+  * `SUSE` for Ceph
 
 
 <!-- .slide: data-state="normal" id="librmb-DT-1" data-timing="20s" data-menu-title="Ceph Dovecot Plugin" -->
