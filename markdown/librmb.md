@@ -99,10 +99,11 @@
 ### Immutable attributes used by Dovecot stored in RADOS xattr
 * rbox format version
 * GUID
-* Received date
-* Save date
-* POP3 UIDL
-* POP3 order
+* Received and save date
+* POP3 UIDL and POP3 order
+* Mailbox GUID
+* Physical and virtual size
+* Mail UID
 
 ### writable attributes are stored in Dovecot index files
 
