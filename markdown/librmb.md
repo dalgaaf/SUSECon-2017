@@ -10,15 +10,15 @@
          data-src="images/dovecot_logo.svg" />
 </div>
 
-### Open source project (LGPL 2.1, MIT)
+### Open source project (LGPL 2.1, MIT) <!-- .element class="fragment" data-fragment-index="0"-->
 
-### 72% market share (openemailsurvey.org, 02/2017)
+### 72% market share (openemailsurvey.org, 02/2017) <!-- .element class="fragment" data-fragment-index="1"-->
 
-### Objectstore plugin available (obox)
-* supports only REST APIs like S3/Swift
-* not open source
-* requires Dovecot Pro
-* large impact on TCO
+### Objectstore plugin available (obox) <!-- .element class="fragment" data-fragment-index="2"-->
+* supports only REST APIs like S3/Swift <!-- .element class="fragment" data-fragment-index="2"-->
+* not open source <!-- .element class="fragment" data-fragment-index="2"-->
+* requires Dovecot Pro <!-- .element class="fragment" data-fragment-index="2"-->
+* large impact on TCO <!-- .element class="fragment" data-fragment-index="2"-->
 
 
 <!-- .slide: data-state="normal" id="dovecot-obox" data-timing="20s" data-menu-title="librmb" -->
@@ -35,16 +35,16 @@
 <div>
      <img style="height: 65%; left: 65%; position: absolute" alt="Partner"
           data-src="images/partner.png" />
-</div>
+</div> <!-- .element class="fragment" data-fragment-index="4"-->
 
-* no open source solution on the market
-* closed source is no option
-* develop / sponsor a solution
-* open source it
-* partner with:
-  * `Wido den Hollander (42on.com)` for consulting
-  * `Tallence AG` for development
-  * `SUSE` for Ceph
+* no open source solution on the market <!-- .element class="fragment" data-fragment-index="0"-->
+* closed source is no option <!-- .element class="fragment" data-fragment-index="1"-->
+* develop / sponsor a solution <!-- .element class="fragment" data-fragment-index="2"-->
+* open source it <!-- .element class="fragment" data-fragment-index="3"-->
+* partner with: <!-- .element class="fragment" data-fragment-index="4"-->
+  * `Wido den Hollander (42on.com)` for consulting <!-- .element class="fragment" data-fragment-index="4"-->
+  * `Tallence AG` for development <!-- .element class="fragment" data-fragment-index="4"-->
+  * `SUSE` for Ceph <!-- .element class="fragment" data-fragment-index="4"-->
 
 
 <!-- .slide: data-state="normal" id="librmb-DT-1" data-timing="20s" data-menu-title="Ceph Dovecot Plugin" -->
@@ -54,30 +54,37 @@
           data-src="images/dovecot-plugin-simple.svg" />
 </div>
 
-### First Step: hybrid approach
+### First Step: hybrid approach <!-- .element class="fragment" data-fragment-index="0"-->
 
-### Emails
-* Store in RADOS Cluster
+### Emails <!-- .element class="fragment" data-fragment-index="1"-->
+* Store in RADOS Cluster <!-- .element class="fragment" data-fragment-index="1"-->
 
-### Metadata and indexes
-* Store in CephFS
+### Metadata and indexes <!-- .element class="fragment" data-fragment-index="2"-->
+* Store in CephFS <!-- .element class="fragment" data-fragment-index="2"-->
 
-### Be as generic as possible
-* Split out code into libraries
-* Integrate into corresponding upstream projects
+### Be as generic as possible <!-- .element class="fragment" data-fragment-index="3"-->
+* Split out code into libraries <!-- .element class="fragment" data-fragment-index="3"-->
+* Integrate into corresponding upstream projects <!-- .element class="fragment" data-fragment-index="3"-->
 
 
 <!-- .slide: data-state="normal" id="librmb-DT-2.0" data-timing="20s" data-menu-title="librmb" -->
 ## Librados mailbox (librmb)
 
-### Generic email abstraction on top of librados
+<span class="fragment" data-fragment-index="0">
+### Generic email abstraction on top of librados <!-- .element: class="fragment" data-fragment-index="0" -->
+</span>
 
-### Out of scope:
-* User data and credential storage
-  * target are huge installations where usually are already solutions in place
+### Out of scope: <!-- .element: class="fragment" data-fragment-index="1" -->
 
-* Full text indexes
-  * There are solutions already available and working outside email storage
+<span class="fragment" data-fragment-index="2">
+* User data and credential storage <!-- .element: class="fragment" data-fragment-index="2" -->
+  * target are huge installations where usually are already solutions in place <!-- .element: class="fragment" data-fragment-index="2" -->
+</span>
+
+<span class="fragment" data-fragment-index="3">
+* Full text indexes <!-- .element: class="fragment" data-fragment-index="3" -->
+  * There are solutions already available and working outside email storage <!-- .element: class="fragment" data-fragment-index="3" -->
+</span>
 
 
 <!-- .slide: data-state="normal" id="librmb-DT-2.1" data-timing="20s" data-menu-title="librmb" -->
@@ -92,20 +99,22 @@
 <!-- .slide: data-state="normal" id="librmb-DT-2.2" data-timing="20s" data-menu-title="librmb - Mail Object Format" -->
 ## librmb - Mail Object Format
 
-### Mails are immutable regarding the RFC-5322 content
+### Mails are immutable regarding the RFC-5322 content <!-- .element: class="fragment" data-fragment-index="1" -->
 
-### RFC-5322 content stored in RADOS directly
+### RFC-5322 content stored in RADOS directly <!-- .element: class="fragment" data-fragment-index="2" -->
 
-### Immutable attributes used by Dovecot stored in RADOS xattr
-* rbox format version
-* GUID
-* Received and save date
-* POP3 UIDL and POP3 order
-* Mailbox GUID
-* Physical and virtual size
-* Mail UID
+<span class="fragment" data-fragment-index="3">
+### Immutable attributes used by Dovecot stored in RADOS xattr <!-- .element: class="fragment" data-fragment-index="3" -->
+* rbox format version <!-- .element: class="fragment" data-fragment-index="3" -->
+* GUID <!-- .element: class="fragment" data-fragment-index="3" -->
+* Received and save date <!-- .element: class="fragment" data-fragment-index="3" -->
+* POP3 UIDL and POP3 order <!-- .element: class="fragment" data-fragment-index="3" -->
+* Mailbox GUID <!-- .element: class="fragment" data-fragment-index="3" -->
+* Physical and virtual size <!-- .element: class="fragment" data-fragment-index="3" -->
+* Mail UID <!-- .element: class="fragment" data-fragment-index="3" -->
+</span>
 
-### writable attributes are stored in Dovecot index files
+### writable attributes are stored in Dovecot index files <!-- .element: class="fragment" data-fragment-index="4" -->
 
 
 <!-- .slide: data-state="normal" id="librmb-DT-2.3" data-timing="20s" data-menu-title="rmb tool" -->
@@ -145,30 +154,38 @@ MAILBOX: M(mailbox_guid)=ad54230e65b49a59381100009c60b9f7
 <!-- .slide: data-state="normal" id="librmb-DT-3" data-timing="20s" data-menu-title="librmb" -->
 ## It's open source!
 
-### License: `LGPLv2.1`
+### <span>License: `LGPLv2.1`</span><!-- .element: class="fragment" data-fragment-index="0" -->
 
-### Language: `C++`
+### <span>Language: `C++`</span> <!-- .element: class="fragment" data-fragment-index="1" -->
 
-### Location: <a href="https://github.com/ceph-dovecot/">github.com/ceph-dovecot/</a>
+### <span>Location: <a href="https://github.com/ceph-dovecot/">github.com/ceph-dovecot/</a></span> <!-- .element: class="fragment" data-fragment-index="2" -->
 
-### Supported Dovecot versions:
-* 2.2 >= 2.2.21
-* 2.3
+<span class="fragment" data-fragment-index="3">
+### Supported Dovecot versions: <!-- .element: class="fragment" data-fragment-index="3" -->
+* 2.2 >= 2.2.21 <!-- .element: class="fragment" data-fragment-index="3" -->
+* 2.3 <!-- .element: class="fragment" data-fragment-index="3" -->
+</span>
 
 
 <!-- .slide: data-state="normal" id="ceph-requirements" data-timing="20s" data-menu-title="Ceph requirements" -->
 ## Ceph Requirements
 
-### Performance
-* Write performance for emails is critical
-* metadata/index read/write performance
+<span class="fragment" data-fragment-index="0">
+### Performance <!-- .element: class="fragment" data-fragment-index="0" -->
+* Write performance for emails is critical <!-- .element: class="fragment" data-fragment-index="0" -->
+* metadata/index read/write performance <!-- .element: class="fragment" data-fragment-index="0" -->
+</span>
 
-### Cost
-* Erasure Coding (EC) for emails
-* Replication for CephFS
+<span class="fragment" data-fragment-index="1">
+### Cost <!-- .element: class="fragment" data-fragment-index="1" -->
+* Erasure Coding (EC) for emails <!-- .element: class="fragment" data-fragment-index="1" -->
+* Replication for CephFS <!-- .element: class="fragment" data-fragment-index="1" -->
+</span>
 
-### Reliability
-* MUST survice failure of disk, server, rack and even fire compartments
+<span class="fragment" data-fragment-index="2">
+### Reliability <!-- .element: class="fragment" data-fragment-index="2" -->
+* MUST survice failure of disk, server, rack and even fire compartments <!-- .element: class="fragment" data-fragment-index="2" -->
+</span>
 
 
 <!-- .slide: data-state="normal" id="ceph-version" data-timing="20s" data-menu-title="Ceph version" -->
@@ -177,15 +194,16 @@ MAILBOX: M(mailbox_guid)=ad54230e65b49a59381100009c60b9f7
 <div>
      <img style="height: 55%; left: 50%; position: absolute" alt="ceph luminous"
           data-src="images/ceph-luminous.png" />
-</div>
+</div> <!-- .element: class="fragment" data-fragment-index="4" -->
 
-### Required Features
-* Bluestore
-  * should be at least 2x faster than filestore
-* CephFS
-  * Stable release
-  * Multi-MDS
-* Erasure coding
+### Required Features: <!-- .element: class="fragment" data-fragment-index="0" -->
+
+* <!-- .element: class="fragment" data-fragment-index="1" --> Bluestore
+  * <!-- .element: class="fragment" data-fragment-index="1" --> should be at least 2x faster than filestore
+* <!-- .element: class="fragment" data-fragment-index="2" --> CephFS
+  * <!-- .element: class="fragment" data-fragment-index="2" --> Stable release
+  * <!-- .element: class="fragment" data-fragment-index="2" --> Multi-MDS
+* <!-- .element: class="fragment" data-fragment-index="3" --> Erasure coding
 
 
 <!-- .slide: data-state="normal" id="ceph-suse" data-timing="20s" data-menu-title="SUSE Products" -->

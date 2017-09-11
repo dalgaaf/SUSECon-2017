@@ -22,14 +22,14 @@ NOTE: well known picture, short info on components
 <!-- .slide: data-state="normal" id="ceph-store-emails-1" data-timing="20s" data-menu-title="Ceph: Options" -->
 ## Ceph Options
 
-### Filesystem
-  * CephFS
-  * NFS Gateway via RGW
-  * Any filesystem on RBD
+### Filesystem <!-- .element class="fragment" data-fragment-index="1"-->
+  * CephFS <!-- .element class="fragment" data-fragment-index="1"-->
+  * NFS Gateway via RGW <!-- .element class="fragment" data-fragment-index="1"-->
+  * Any filesystem on RBD <!-- .element class="fragment" data-fragment-index="1"-->
 
-### Objectstore
-  * S3/Swift via RGW
-  * RADOS
+### Objectstore <!-- .element class="fragment" data-fragment-index="2"-->
+  * S3/Swift via RGW <!-- .element class="fragment" data-fragment-index="2"-->
+  * RADOS <!-- .element class="fragment" data-fragment-index="2"-->
 
 
 <!-- .slide: data-state="normal" id="ceph-store-emails-2" data-timing="20s" data-menu-title="Ceph: Option CephFS" -->
@@ -42,10 +42,10 @@ NOTE: well known picture, short info on components
 
 ### CephFS
 
-* same issues as NFS
-* mail storage on POSIX layer adds complexity
-* no option for emails
-* usable for metadata/caches/indexes
+* same issues as NFS <!-- .element class="fragment" -->
+* mail storage on POSIX layer adds complexity <!-- .element class="fragment" -->
+* no option for emails <!-- .element class="fragment" -->
+* usable for metadata/caches/indexes <!-- .element class="fragment" -->
 
 
 <!-- .slide: data-state="normal" id="ceph-store-emails-3" data-timing="20s" data-menu-title="Ceph: Option RBD" -->
@@ -58,11 +58,11 @@ NOTE: well known picture, short info on components
 
 ### RBD
 
-* needs sharding and large RBDs
-* needs account migration
-* needs RBD/fs extend scenarios
-* no sharing between clients
-* impracticable
+* needs sharding and large RBDs <!-- .element class="fragment" -->
+* needs account migration <!-- .element class="fragment" -->
+* needs RBD/fs extend scenarios <!-- .element class="fragment" -->
+* no sharing between clients <!-- .element class="fragment" -->
+* impracticable <!-- .element class="fragment" -->
 
 
 <!-- .slide: data-state="normal" id="ceph-store-emails-4" data-timing="20s" data-menu-title="Ceph: Option RadosGW" -->
@@ -74,10 +74,10 @@ NOTE: well known picture, short info on components
 </div>
 
 ### RadosGW
-* can store emails as objects
-* extra network hops
-* potential bottleneck
-* very likely not fast enough
+* can store emails as objects <!-- .element class="fragment" -->
+* extra network hops <!-- .element class="fragment" -->
+* potential bottleneck <!-- .element class="fragment" -->
+* very likely not fast enough <!-- .element class="fragment" -->
 
 
 <!-- .slide: data-state="normal" id="ceph-store-emails-5" data-timing="20s" data-menu-title="Ceph: Option librados" -->
@@ -89,8 +89,8 @@ NOTE: well known picture, short info on components
 </div>
 
 ### Librados
-* direct access to RADOS
-* parallel I/O
-* not optimized for emails
-* how to handle metadata/caches/indexes?
+* direct access to RADOS <!-- .element class="fragment" -->
+* parallel I/O <!-- .element class="fragment" -->
+* not optimized for emails <!-- .element class="fragment" -->
+* how to handle metadata/caches/indexes? <!-- .element class="fragment" -->
 
