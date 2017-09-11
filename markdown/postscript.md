@@ -28,6 +28,7 @@
 
 <!-- .slide: data-menu-title="Disclaimers" id="disclaimers" data-state="green-bg" -->
 
+<!--
 ### Unpublished Work of SUSE LLC. All Rights Reserved.
 
 This work is an unpublished work and contains confidential,
@@ -39,7 +40,7 @@ modified, translated, abridged, condensed, expanded, collected, or
 adapted without the prior written consent of SUSE.  Any use or
 exploitation of this work without authorization could subject the
 perpetrator to criminal and civil liability.
-
+-->
 ### General Disclaimer
 
 This document is not to be construed as a promise by any participating

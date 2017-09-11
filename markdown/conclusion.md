@@ -5,17 +5,17 @@
 <!-- .slide: data-state="normal" id="conclusion-0" data-timing="20s" data-menu-title="Conclusion" -->
 ## Summary and conclusions
 
-### Ceph can replace NFS
-* mails in RADOS
-* metadata/indexes in CephFS
-* BlueStore, EC
+### Ceph can replace NFS <!-- .element: class="fragment" data-fragment-index="0" -->
+* <!-- .element: class="fragment" data-fragment-index="1" --> mails in RADOS
+* <!-- .element: class="fragment" data-fragment-index="2" --> metadata/indexes in CephFS
+* <!-- .element: class="fragment" data-fragment-index="3" --> BlueStore, EC
 
-### librmb and dovecot rbox
-* Open Source, LGPLv2.1, no license costs
-* librmb can be used in non-dovecot systems
-* still under development
+### librmb and dovecot rbox <!-- .element: class="fragment" data-fragment-index="4" -->
+* <!-- .element: class="fragment" data-fragment-index="5" --> Open Source, LGPLv2.1, no license costs
+* <!-- .element: class="fragment" data-fragment-index="6" --> librmb can be used in non-dovecot systems
+* <!-- .element: class="fragment" data-fragment-index="7" --> still under development
 
-### PoC with dovecot in progress
+### PoC with dovecot in progress <!-- .element: class="fragment" data-fragment-index="8" -->
 
-### Performance optimization
+### Performance optimization <!-- .element: class="fragment" data-fragment-index="9" -->
 
