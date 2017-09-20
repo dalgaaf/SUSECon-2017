@@ -11,12 +11,12 @@ NOTE: well known picture, short info on components
 <!-- .slide: data-state="normal" id="motivation-goals" data-timing="20s" data-menu-title="Goals" -->
 ## Motivation
 
-* Scale-out vs Scale-up
-* Fast self healing
-* Commodity hardware
-* Prevent vendor lock-in
-* Open Source where feasible
-* Reduce Total Cost of Ownership (TCO)
+* scale-out vs scale-up <!-- .element class="fragment" -->
+* fast self healing <!-- .element class="fragment" -->
+* commodity hardware <!-- .element class="fragment" -->
+* prevent vendor lock-in <!-- .element class="fragment" -->
+* open source where feasible <!-- .element class="fragment" -->
+* reduce Total Cost of Ownership (TCO) <!-- .element class="fragment" -->
 
 
 <!-- .slide: data-state="normal" id="ceph-store-emails-1" data-timing="20s" data-menu-title="Ceph: Options" -->
@@ -25,7 +25,7 @@ NOTE: well known picture, short info on components
 ### Filesystem <!-- .element class="fragment" data-fragment-index="1"-->
   * CephFS <!-- .element class="fragment" data-fragment-index="1"-->
   * NFS Gateway via RGW <!-- .element class="fragment" data-fragment-index="1"-->
-  * Any filesystem on RBD <!-- .element class="fragment" data-fragment-index="1"-->
+  * any filesystem on RBD <!-- .element class="fragment" data-fragment-index="1"-->
 
 ### Objectstore <!-- .element class="fragment" data-fragment-index="2"-->
   * S3/Swift via RGW <!-- .element class="fragment" data-fragment-index="2"-->
@@ -46,6 +46,12 @@ NOTE: well known picture, short info on components
 * mail storage on POSIX layer adds complexity <!-- .element class="fragment" -->
 * no option for emails <!-- .element class="fragment" -->
 * usable for metadata/caches/indexes <!-- .element class="fragment" -->
+<br>
+<br>
+
+#### <b>Security</b> <!-- .element class="fragment" -->
+* requires direct access to storage network <!-- .element class="fragment" -->
+* only for dedicated platform <!-- .element class="fragment" -->
 
 
 <!-- .slide: data-state="normal" id="ceph-store-emails-3" data-timing="20s" data-menu-title="Ceph: Option RBD" -->
@@ -58,11 +64,17 @@ NOTE: well known picture, short info on components
 
 ### RBD
 
-* needs sharding and large RBDs <!-- .element class="fragment" -->
-* needs account migration <!-- .element class="fragment" -->
-* needs RBD/fs extend scenarios <!-- .element class="fragment" -->
+* requires sharding and large RBDs <!-- .element class="fragment" -->
+* requires RBD/fs extend scenarios <!-- .element class="fragment" -->
+* regular account migration<!-- .element class="fragment" -->
 * no sharing between clients <!-- .element class="fragment" -->
 * impracticable <!-- .element class="fragment" -->
+<br>
+<br>
+
+#### <b>Security</b> <!-- .element class="fragment" -->
+* no direct access to storage network required <!-- .element class="fragment" -->
+* secure through hypervisor abstraction (libvirt) <!-- .element class="fragment" -->
 
 
 <!-- .slide: data-state="normal" id="ceph-store-emails-4" data-timing="20s" data-menu-title="Ceph: Option RadosGW" -->
@@ -78,6 +90,12 @@ NOTE: well known picture, short info on components
 * extra network hops <!-- .element class="fragment" -->
 * potential bottleneck <!-- .element class="fragment" -->
 * very likely not fast enough <!-- .element class="fragment" -->
+<br>
+<br>
+
+#### <b>Security</b> <!-- .element class="fragment" -->
+* no direct access to Ceph storage network required <!-- .element class="fragment" -->
+* connection to RadosGW can be secured (WAF) <!-- .element class="fragment" -->
 
 
 <!-- .slide: data-state="normal" id="ceph-store-emails-5" data-timing="20s" data-menu-title="Ceph: Option librados" -->
@@ -93,4 +111,9 @@ NOTE: well known picture, short info on components
 * parallel I/O <!-- .element class="fragment" -->
 * not optimized for emails <!-- .element class="fragment" -->
 * how to handle metadata/caches/indexes? <!-- .element class="fragment" -->
+<br>
+<br>
 
+#### <b>Security</b> <!-- .element class="fragment" -->
+* requires direct access to storage network <!-- .element class="fragment" -->
+* only for dedicated platform <!-- .element class="fragment" -->

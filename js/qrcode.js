@@ -14,6 +14,8 @@ Reveal.addEventListener( 'ready', function( event ) {
              * it */
             if (target) {
                 var qr = new QRCode(target, {
+                    width : 450,
+                    height : 450,
                     colorDark : "#000000",
                     colorLight : "rgba(255,255,255,0)",
                 });

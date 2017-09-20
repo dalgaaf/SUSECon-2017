@@ -52,19 +52,19 @@
 <div>
      <img style="height: 70%; left: 60%; position: absolute" alt="Ceph Plugin basics"
           data-src="images/dovecot-plugin-simple.svg" />
-</div>
+</div> <!-- .element class="fragment" data-fragment-index="3"-->
 
 ### First Step: hybrid approach <!-- .element class="fragment" data-fragment-index="0"-->
 
 ### Emails <!-- .element class="fragment" data-fragment-index="1"-->
-* Store in RADOS Cluster <!-- .element class="fragment" data-fragment-index="1"-->
+* store in RADOS Cluster <!-- .element class="fragment" data-fragment-index="1"-->
 
 ### Metadata and indexes <!-- .element class="fragment" data-fragment-index="2"-->
-* Store in CephFS <!-- .element class="fragment" data-fragment-index="2"-->
+* store in CephFS <!-- .element class="fragment" data-fragment-index="2"-->
 
-### Be as generic as possible <!-- .element class="fragment" data-fragment-index="3"-->
-* Split out code into libraries <!-- .element class="fragment" data-fragment-index="3"-->
-* Integrate into corresponding upstream projects <!-- .element class="fragment" data-fragment-index="3"-->
+### Be as generic as possible <!-- .element class="fragment" data-fragment-index="4"-->
+* split out code into libraries <!-- .element class="fragment" data-fragment-index="4"-->
+* integrate into corresponding upstream projects <!-- .element class="fragment" data-fragment-index="4"-->
 
 
 <!-- .slide: data-state="normal" id="librmb-DT-2.0" data-timing="20s" data-menu-title="librmb" -->
@@ -77,12 +77,12 @@
 ### Out of scope: <!-- .element: class="fragment" data-fragment-index="1" -->
 
 <span class="fragment" data-fragment-index="2">
-* User data and credential storage <!-- .element: class="fragment" data-fragment-index="2" -->
+* user data and credential storage <!-- .element: class="fragment" data-fragment-index="2" -->
   * target are huge installations where usually are already solutions in place <!-- .element: class="fragment" data-fragment-index="2" -->
 </span>
 
 <span class="fragment" data-fragment-index="3">
-* Full text indexes <!-- .element: class="fragment" data-fragment-index="3" -->
+* full text indexes <!-- .element: class="fragment" data-fragment-index="3" -->
   * There are solutions already available and working outside email storage <!-- .element: class="fragment" data-fragment-index="3" -->
 </span>
 
@@ -114,7 +114,7 @@
 * Mail UID <!-- .element: class="fragment" data-fragment-index="3" -->
 </span>
 
-### writable attributes are stored in Dovecot index files <!-- .element: class="fragment" data-fragment-index="4" -->
+### Writable attributes are stored in Dovecot index files <!-- .element: class="fragment" data-fragment-index="4" -->
 
 
 <!-- .slide: data-state="normal" id="librmb-DT-2.3" data-timing="20s" data-menu-title="rmb tool" -->
@@ -154,6 +154,11 @@ MAILBOX: M(mailbox_guid)=ad54230e65b49a59381100009c60b9f7
 <!-- .slide: data-state="normal" id="librmb-DT-3" data-timing="20s" data-menu-title="librmb" -->
 ## It's open source!
 
+<div>
+     <img style="position: absolute; width: 50%; left: 55%;" alt="Screenshot github ceph-dovecot"
+          data-src="images/github-ceph-dovecot.png" />
+</div> <!-- .element: class="fragment" data-fragment-index="2" -->
+
 ### <span>License: `LGPLv2.1`</span><!-- .element: class="fragment" data-fragment-index="0" -->
 
 ### <span>Language: `C++`</span> <!-- .element: class="fragment" data-fragment-index="1" -->
@@ -172,14 +177,14 @@ MAILBOX: M(mailbox_guid)=ad54230e65b49a59381100009c60b9f7
 
 <span class="fragment" data-fragment-index="0">
 ### Performance <!-- .element: class="fragment" data-fragment-index="0" -->
-* Write performance for emails is critical <!-- .element: class="fragment" data-fragment-index="0" -->
+* write performance for emails is critical <!-- .element: class="fragment" data-fragment-index="0" -->
 * metadata/index read/write performance <!-- .element: class="fragment" data-fragment-index="0" -->
 </span>
 
 <span class="fragment" data-fragment-index="1">
 ### Cost <!-- .element: class="fragment" data-fragment-index="1" -->
 * Erasure Coding (EC) for emails <!-- .element: class="fragment" data-fragment-index="1" -->
-* Replication for CephFS <!-- .element: class="fragment" data-fragment-index="1" -->
+* replication for CephFS <!-- .element: class="fragment" data-fragment-index="1" -->
 </span>
 
 <span class="fragment" data-fragment-index="2">
