@@ -6,7 +6,7 @@
 ## Status
 
 ### Dovecot Ceph Plugin <!-- .element: class="fragment" data-fragment-index="0" -->
-* <!-- .element: class="fragment" data-fragment-index="1" --> Open sourced
+* <!-- .element: class="fragment" data-fragment-index="1" --> open sourced
   * <!-- .element: class="fragment" data-fragment-index="1" --> github
 * <!-- .element: class="fragment" data-fragment-index="2" --> still under development
 * <!-- .element: class="fragment" data-fragment-index="3" --> still includes librmb
@@ -17,10 +17,10 @@
 ## Testing
 
 ### Functional testing 
-* Setup small 5-node cluster 
-* SLES12-SP3 GMC 
-* SES5 Beta
-* Run Dovecot functional tests against Ceph
+* setup small 5-node cluster 
+  * SLES12-SP3 GMC 
+  * SES5 Beta
+* run Dovecot functional tests against Ceph
 
 
 <!-- .slide: data-state="normal" id="status-2" data-timing="20s" data-menu-title="PoC" -->

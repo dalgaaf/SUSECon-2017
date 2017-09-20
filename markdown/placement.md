@@ -10,10 +10,10 @@
 * <!-- .element: class="fragment" data-fragment-index="2" --> may additional virtual FCs
 
 ### Requirements <!-- .element: class="fragment" data-fragment-index="3" -->
-* <!-- .element: class="fragment" data-fragment-index="4" --> Lost of customer data MUST be prevented
-* <!-- .element: class="fragment" data-fragment-index="5" --> Any server, switch or rack can fail
-* <!-- .element: class="fragment" data-fragment-index="5" --> One FC can fail
-* <!-- .element: class="fragment" data-fragment-index="5" --> Data replication at least 3 times (or equivalent)
+* <!-- .element: class="fragment" data-fragment-index="4" --> lost of customer data MUST be prevented
+* <!-- .element: class="fragment" data-fragment-index="5" --> any server, switch or rack can fail
+* <!-- .element: class="fragment" data-fragment-index="5" --> one FC can fail
+* <!-- .element: class="fragment" data-fragment-index="5" --> data replication at least 3 times (or equivalent)
 
 
 <!-- .slide: data-state="normal" id="placement-2" data-timing="20s" data-menu-title="Placement issues" -->
@@ -40,10 +40,10 @@
 * <!-- .element: class="fragment" data-fragment-index="1" --> SFP+ DAC
 
 ### Multi-chassis Link Aggregation (MC-LAG/M-LAG) <!-- .element: class="fragment" data-fragment-index="2" -->
-* <!-- .element: class="fragment" data-fragment-index="2" --> For aggregation and fail-over
+* <!-- .element: class="fragment" data-fragment-index="2" --> for aggregation and fail-over
 
 ### Spine-Leaf architecture <!-- .element: class="fragment" data-fragment-index="3" -->
-* <!-- .element: class="fragment" data-fragment-index="4" --> Interconnect must not reflect theoretical rack/FC bandwidth
+* <!-- .element: class="fragment" data-fragment-index="4" --> interconnect must not reflect theoretical rack/FC bandwidth
 * <!-- .element: class="fragment" data-fragment-index="5" --> L2: terminated in rack
 * <!-- .element: class="fragment" data-fragment-index="6" --> L3: TOR <-> spine / spine <-> spine
 * <!-- .element: class="fragment" data-fragment-index="7" --> Border Gateway Protocol (BGP)
