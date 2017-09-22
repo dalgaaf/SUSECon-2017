@@ -7,10 +7,12 @@
 
 ### Dovecot Ceph Plugin <!-- .element: class="fragment" data-fragment-index="0" -->
 * <!-- .element: class="fragment" data-fragment-index="1" --> open sourced
-  * <!-- .element: class="fragment" data-fragment-index="1" --> github
-* <!-- .element: class="fragment" data-fragment-index="2" --> still under development
-* <!-- .element: class="fragment" data-fragment-index="3" --> still includes librmb
-  * <!-- .element: class="fragment" data-fragment-index="3" --> planned: move to Ceph project
+  * <!-- .element: class="fragment" data-fragment-index="1" --> https://github.com/ceph-dovecot/
+* <!-- .element: class="fragment" data-fragment-index="2" --> initial SLES12-SP3, openSUSE Leap 42.3, and Tumbleweed RPMs
+  * <!-- .element: class="fragment" data-fragment-index="2" --> https://build.opensuse.org/package/show/home:dalgaaf:dovecot-ceph-plugin
+* <!-- .element: class="fragment" data-fragment-index="3" --> still under development
+* <!-- .element: class="fragment" data-fragment-index="4" --> still includes librmb
+  * <!-- .element: class="fragment" data-fragment-index="4" --> planned: move to Ceph project
 
 
 <!-- .slide: data-state="normal" id="status-1" data-timing="20s" data-menu-title="Testing" -->
