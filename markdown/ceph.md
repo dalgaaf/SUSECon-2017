@@ -2,13 +2,7 @@
 # Ceph
 
 
-<!-- .slide: data-state="normal" id="ceph-overview" data-timing="20s" data-menu-title="Ceph Components" -->
-<center><img src="images/ceph-stack.svg" style="width:85%"></center>
-
-NOTE: well known picture, short info on components
-
-
-<!-- .slide: data-state="normal" id="motivation-goals" data-timing="20s" data-menu-title="Goals" -->
+<!-- .slide: data-state="normal" id="motivation-goals" data-timing="20s" data-menu-title="Motivation" -->
 ## Motivation
 
 * scale-out vs scale-up <!-- .element class="fragment" -->
@@ -17,6 +11,12 @@ NOTE: well known picture, short info on components
 * prevent vendor lock-in <!-- .element class="fragment" -->
 * open source where feasible <!-- .element class="fragment" -->
 * reduce Total Cost of Ownership (TCO) <!-- .element class="fragment" -->
+
+
+<!-- .slide: data-state="normal" id="ceph-overview" data-timing="20s" data-menu-title="Ceph Components" -->
+<center><img src="images/ceph-stack.svg" style="width:85%"></center>
+
+NOTE: well known picture, short info on components
 
 
 <!-- .slide: data-state="normal" id="ceph-store-emails-1" data-timing="20s" data-menu-title="Ceph: Options" -->

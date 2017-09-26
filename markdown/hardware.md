@@ -15,7 +15,8 @@
 * <!-- .element: class="fragment" data-fragment-index="2" --> dual socket
   * <!-- .element: class="fragment" data-fragment-index="2" --> Intel® Xeon® E5 V4
 * <!-- .element: class="fragment" data-fragment-index="3" --> 2x Intel® X710-DA2 Dual-port 10G
-* <!-- .element: class="fragment" data-fragment-index="4" --> 2x boot SSDs, SATA, HBA, no separate RAID controller
+* <!-- .element: class="fragment" data-fragment-index="4" --> 2x boot SSDs, SATA, HBA
+* <!-- .element: class="fragment" data-fragment-index="5" --> HBA, no separate RAID controller
 
 <br>
 ### CephFS, Rados, MDS and MON nodes <!-- .element: class="fragment" data-fragment-index="5" -->
@@ -59,7 +60,7 @@
 
 <br>
 ### NUMA, high clocked CPUs and large RAM overkill? <!-- .element: class="fragment" data-fragment-index="3" -->
-* <!-- .element: class="fragment" data-fragment-index="4" --> vendor did not offer single CPU nodes for number of drives
+* <!-- .element: class="fragment" data-fragment-index="4" --> vendor did not offer single socket nodes for number of drives
 * <!-- .element: class="fragment" data-fragment-index="5" --> MDS performance is mostly CPU clock bound and partly single threaded
   * <!-- .element: class="fragment" data-fragment-index="5" --> high clocked CPUs for fast single threaded performance
 * <!-- .element: class="fragment" data-fragment-index="6" --> large RAM: better caching!

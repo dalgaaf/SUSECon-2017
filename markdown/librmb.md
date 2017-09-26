@@ -83,7 +83,7 @@
 
 <span class="fragment" data-fragment-index="3">
 * full text indexes <!-- .element: class="fragment" data-fragment-index="3" -->
-  * There are solutions already available and working outside email storage <!-- .element: class="fragment" data-fragment-index="3" -->
+  * there are solutions already available and working outside email storage <!-- .element: class="fragment" data-fragment-index="3" -->
 </span>
 
 
