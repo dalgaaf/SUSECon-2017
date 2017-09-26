@@ -73,7 +73,7 @@
   * user frontend (mailer vs webmailer) <!-- .element class="fragment" data-fragment-index="2"-->
 
 ### usually separated metadata, caches and indexes <!-- .element class="fragment" data-fragment-index="3"-->
-  * lost of metadata/indexes is critical <!-- .element class="fragment" data-fragment-index="3"-->
+  * loss of metadata/indexes is critical <!-- .element class="fragment" data-fragment-index="3"-->
 
 ### without attachments easy to compress <!-- .element class="fragment" data-fragment-index="4"-->
 

@@ -10,7 +10,7 @@
 * <!-- .element: class="fragment" data-fragment-index="2" --> may additional virtual FCs
 
 ### Requirements <!-- .element: class="fragment" data-fragment-index="3" -->
-* <!-- .element: class="fragment" data-fragment-index="4" --> lost of customer data MUST be prevented
+* <!-- .element: class="fragment" data-fragment-index="4" --> loss of customer data MUST be prevented
 * <!-- .element: class="fragment" data-fragment-index="5" --> any server, switch or rack can fail
 * <!-- .element: class="fragment" data-fragment-index="5" --> one FC can fail
 * <!-- .element: class="fragment" data-fragment-index="5" --> data replication at least 3 times (or equivalent)
